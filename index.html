@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+              application itself.
+            </p>
+            <div class="log-block">
+              GitHub push → webhook / polling trigger → fb-sync → Forgejo
+              workflow_dispatch → build image → push image → record CI state in
+              PostgreSQL → show summary
+            </div>
+          </section>
+
+          <section class="panel" id="tech-stack">
+            <div class="panel-title">Tech Stack</div>
+            <div class="columns-2">
+              <div>
+                <h2>Frontend</h2>
+                <p>React, Vite, TypeScript, Material UI, Zustand, React Router</p>
+              </div>
+              <div>
+                <h2>Backend</h2>
+                <p>Node.js, Express, TypeScript, PostgreSQL, JWT, REST API</p>
+              </div>
+              <div>
+                <h2>DevOps</h2>
+                <p>Docker, Docker Compose, GitHub Actions, Forgejo Actions, Nginx, Linux, NixOS</p>
+              </div>
+              <div>
+                <h2>Testing</h2>
+                <p>ESLint, Jest, Contract tests, OpenAPI, Playwright</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel" id="proof">
+            <div class="panel-title">Proof of Work</div>
+            <div class="proof-grid">
+              <div class="proof-card">Annos Docker containers running healthy</div>
+              <div class="proof-card">GitHub Actions pipeline</div>
+              <div class="proof-card">Swagger / OpenAPI documentation</div>
+              <div class="proof-card">Admin order dashboard</div>
+              <div class="proof-card">Restaurant menu management</div>
+              <div class="proof-card">Flowback CI summary</div>
+            </div>
+          </section>
+
+          <section class="panel" id="contact">
+            <div class="panel-title">Contact</div>
+            <p>GitHub: <a href="https://github.com/Macfatty" target="_blank" rel="noreferrer">github.com/Macfatty</a></p>
+            <p>LinkedIn: Add your profile link here</p>
+            <p>Email: Add a masked email here</p>
+          </section>
+        </main>
+
+        <aside class="status-column panel">
+          <div class="panel-title">System Status</div>
+          <dl id="status-panel" class="status-list">
+            <div>
+              <dt>Loading</dt>
+              <dd>Reading status.json...</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </div>
+
+    <script src="status.js"></script>
+  </body>
+</html>
