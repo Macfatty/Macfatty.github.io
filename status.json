@@ -1,0 +1,10 @@
+{
+  "portfolio": "Macfatty.github.io",
+  "main_project": "Annos",
+  "secondary_project": "Flowback",
+  "annos_status": "production-ready foundation",
+  "flowback_status": "self-hosted CI/CD lab",
+  "build_status": "success",
+  "security_focus": true,
+  "last_updated": "2026-04-28"
+}
