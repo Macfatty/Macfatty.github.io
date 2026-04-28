@@ -198,14 +198,42 @@
 
           <section class="panel" id="security">
             <div class="panel-title">Security</div>
-            <ul>
-              <li>HTTP-only cookies instead of localStorage tokens</li>
-              <li>JWT authentication</li>
-              <li>Role-based access control</li>
-              <li>Rate limiting on authentication routes</li>
-              <li>GDPR export and deletion endpoints</li>
-              <li>Non-root Docker containers</li>
-            </ul>
+            <p>
+              Security in Annos is treated as part of the system design rather
+              than something added at the end. The project combines application-
+              level protections with operational safeguards to reduce risk and
+              make the platform safer to run.
+            </p>
+            <div class="columns-2">
+              <div>
+                <h2>Application Security</h2>
+                <ul>
+                  <li>HTTP-only cookies instead of localStorage tokens</li>
+                  <li>JWT authentication</li>
+                  <li>Role-based access control</li>
+                  <li>Rate limiting on authentication routes</li>
+                  <li>Password requirements and validation</li>
+                  <li>Standardized API error responses</li>
+                  <li>GDPR data export endpoint</li>
+                  <li>GDPR account deletion endpoint</li>
+                </ul>
+              </div>
+              <div>
+                <h2>Operational Security</h2>
+                <ul>
+                  <li>Non-root Docker containers</li>
+                  <li>Docker network isolation</li>
+                  <li>.env values kept outside Git</li>
+                  <li>No secrets exposed in frontend code</li>
+                  <li>Health checks for service verification</li>
+                  <li>Controlled deployment direction and rollback planning</li>
+                </ul>
+              </div>
+            </div>
+            <p>
+              The goal is to build a system that is easier to trust, easier to
+              maintain and less dependent on risky shortcuts.
+            </p>
           </section>
 
           <section class="panel" id="flowback">
