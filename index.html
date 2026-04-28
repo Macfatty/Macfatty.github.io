@@ -1,10 +1,163 @@
 <!DOCTYPE html>
-              application itself.
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ayuub Mohammadin | Portfolio Dashboard</title>
+    <meta
+      name="description"
+      content="Portfolio dashboard focused on Annos and Flowback."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">SYSTEM CONTROL PANEL</p>
+          <h1>Ayuub Mohammadin</h1>
+          <p class="subtitle">
+            DevOps Engineer in Progress • Fullstack Systems • CI/CD • Security • Self-hosted Infrastructure
+          </p>
+        </div>
+        <div class="topbar-status">
+          <span class="status-dot"></span>
+          <span>Portfolio Status: Online</span>
+        </div>
+      </header>
+
+      <nav class="topnav" aria-label="Primary">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#annos">Annos Platform</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#cicd">CI/CD Pipeline</a>
+        <a href="#security">Security</a>
+        <a href="#flowback">Flowback</a>
+        <a href="#tech-stack">Tech Stack</a>
+        <a href="#proof">Proof of Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="layout">
+        <aside class="sidebar panel">
+          <div class="panel-title">Navigation</div>
+          <ul class="sidebar-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#annos">Annos Platform</a></li>
+            <li><a href="#architecture">Architecture</a></li>
+            <li><a href="#cicd">CI/CD Pipeline</a></li>
+            <li><a href="#security">Security</a></li>
+            <li><a href="#flowback">Flowback</a></li>
+            <li><a href="#tech-stack">Tech Stack</a></li>
+            <li><a href="#proof">Proof of Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </aside>
+
+        <main class="content">
+          <section class="panel" id="home">
+            <div class="panel-title">Overview</div>
+            <p>
+              I build fullstack systems and self-hosted infrastructure with focus on
+              security, reproducibility and operational control.
             </p>
+            <div class="hero-grid">
+              <div class="info-card">
+                <h2>Main Case</h2>
+                <p>Annos — production-oriented food ordering platform.</p>
+              </div>
+              <div class="info-card">
+                <h2>Secondary Case</h2>
+                <p>Flowback — self-hosted CI/CD and infrastructure work.</p>
+              </div>
+              <div class="info-card">
+                <h2>Content Split</h2>
+                <p>70% Annos / 30% Flowback</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel" id="about">
+            <div class="panel-title">About</div>
+            <p>
+              I am a DevOps Engineer student focused on building, securing and
+              operating real systems.
+            </p>
+            <p>
+              My main project is Annos, a fullstack food ordering platform with
+              role-based access, Dockerized services, PostgreSQL, CI/CD,
+              security hardening and production deployment preparation.
+            </p>
+          </section>
+
+          <section class="panel" id="annos">
+            <div class="panel-title">Annos Platform</div>
+            <p>
+              Annos is a fullstack food ordering platform designed around four user roles:
+              customer, restaurant, courier and admin.
+            </p>
+            <div class="tag-row">
+              <span>Customer flow</span>
+              <span>Restaurant dashboard</span>
+              <span>Courier interface</span>
+              <span>Admin panel</span>
+              <span>GPS tracking</span>
+              <span>GDPR endpoints</span>
+              <span>Dockerized deployment</span>
+            </div>
+          </section>
+
+          <section class="panel" id="architecture">
+            <div class="panel-title">Architecture</div>
+            <div class="columns-2">
+              <div>
+                <h2>Frontend</h2>
+                <ul>
+                  <li>React 19</li>
+                  <li>Vite</li>
+                  <li>TypeScript</li>
+                  <li>React Router</li>
+                  <li>Zustand</li>
+                </ul>
+              </div>
+              <div>
+                <h2>Backend</h2>
+                <ul>
+                  <li>Node.js</li>
+                  <li>Express</li>
+                  <li>TypeScript</li>
+                  <li>REST API</li>
+                  <li>HTTP-only cookies</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel" id="cicd">
+            <div class="panel-title">CI/CD Pipeline</div>
             <div class="log-block">
-              GitHub push → webhook / polling trigger → fb-sync → Forgejo
-              workflow_dispatch → build image → push image → record CI state in
-              PostgreSQL → show summary
+              Git push → GitHub Actions → linting → tests → TypeScript validation → Docker build → security audit → build summary
+            </div>
+          </section>
+
+          <section class="panel" id="security">
+            <div class="panel-title">Security</div>
+            <ul>
+              <li>HTTP-only cookies instead of localStorage tokens</li>
+              <li>JWT authentication</li>
+              <li>Role-based access control</li>
+              <li>Rate limiting on authentication routes</li>
+              <li>GDPR export and deletion endpoints</li>
+              <li>Non-root Docker containers</li>
+            </ul>
+          </section>
+
+          <section class="panel" id="flowback">
+            <div class="panel-title">Flowback Infrastructure</div>
+            <div class="log-block">
+              GitHub push → trigger → fb-sync → Forgejo workflow_dispatch → build image → push image → record CI state in PostgreSQL
             </div>
           </section>
 
@@ -13,19 +166,19 @@
             <div class="columns-2">
               <div>
                 <h2>Frontend</h2>
-                <p>React, Vite, TypeScript, Material UI, Zustand, React Router</p>
+                <p>React, Vite, TypeScript, Material UI, Zustand</p>
               </div>
               <div>
                 <h2>Backend</h2>
-                <p>Node.js, Express, TypeScript, PostgreSQL, JWT, REST API</p>
+                <p>Node.js, Express, PostgreSQL, JWT, REST API</p>
               </div>
               <div>
                 <h2>DevOps</h2>
-                <p>Docker, Docker Compose, GitHub Actions, Forgejo Actions, Nginx, Linux, NixOS</p>
+                <p>Docker, Docker Compose, GitHub Actions, Forgejo, Nginx, Linux, NixOS</p>
               </div>
               <div>
                 <h2>Testing</h2>
-                <p>ESLint, Jest, Contract tests, OpenAPI, Playwright</p>
+                <p>ESLint, Jest, OpenAPI, Contract tests, Playwright</p>
               </div>
             </div>
           </section>
