@@ -160,9 +160,40 @@
 
           <section class="panel" id="cicd">
             <div class="panel-title">CI/CD Pipeline</div>
+            <p>
+              Annos is built with a CI-first workflow where every code change is
+              treated as something that should be checked, validated and made
+              easier to deploy safely.
+            </p>
             <div class="log-block">
               Git push → GitHub Actions → linting → tests → TypeScript validation → Docker build → security audit → build summary
             </div>
+            <div class="columns-2">
+              <div>
+                <h2>Current CI</h2>
+                <ul>
+                  <li>Linting and code quality checks</li>
+                  <li>TypeScript validation</li>
+                  <li>Backend test execution</li>
+                  <li>Docker build verification</li>
+                  <li>Security-oriented checks in pipeline</li>
+                </ul>
+              </div>
+              <div>
+                <h2>Next CD Steps</h2>
+                <ul>
+                  <li>Image versioning</li>
+                  <li>Push images to GHCR</li>
+                  <li>Automated deployment flow</li>
+                  <li>Health check verification</li>
+                  <li>Rollback-oriented deployment strategy</li>
+                </ul>
+              </div>
+            </div>
+            <p>
+              The goal is not only fast feedback, but a delivery process that is
+              traceable, repeatable and safer to operate over time.
+            </p>
           </section>
 
           <section class="panel" id="security">
