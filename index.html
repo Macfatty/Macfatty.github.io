@@ -238,9 +238,40 @@
 
           <section class="panel" id="flowback">
             <div class="panel-title">Flowback Infrastructure</div>
+            <p>
+              Flowback represents my self-hosted infrastructure work and shows
+              how I think about automation, controlled delivery and operational
+              visibility outside the application itself.
+            </p>
             <div class="log-block">
               GitHub push → trigger → fb-sync → Forgejo workflow_dispatch → build image → push image → record CI state in PostgreSQL
             </div>
+            <div class="columns-2">
+              <div>
+                <h2>Infrastructure Focus</h2>
+                <ul>
+                  <li>GitHub as upstream source</li>
+                  <li>Local Forgejo as internal Git platform</li>
+                  <li>Self-hosted runners</li>
+                  <li>Controlled automation flow</li>
+                  <li>Security-first design decisions</li>
+                </ul>
+              </div>
+              <div>
+                <h2>Pipeline Goals</h2>
+                <ul>
+                  <li>Automated repository sync</li>
+                  <li>Docker image build and push</li>
+                  <li>Stored CI state in PostgreSQL</li>
+                  <li>Clear run summaries after each workflow</li>
+                  <li>Operational traceability over time</li>
+                </ul>
+              </div>
+            </div>
+            <p>
+              Flowback supports the same mindset as Annos: build systems that
+              are observable, repeatable and easier to operate with confidence.
+            </p>
           </section>
 
           <section class="panel" id="tech-stack">
