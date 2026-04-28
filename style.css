@@ -1,0 +1,62 @@
+:root {
+
+.log-block {
+  padding: 14px;
+  border: 1px solid #285d49;
+  background: #07140f;
+  color: #90f7b5;
+  font-family: "Courier New", monospace;
+  line-height: 1.7;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.status-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.status-list dt {
+  color: var(--muted);
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.status-list dd {
+  margin: 0;
+}
+
+@media (max-width: 1100px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar,
+  .status-column {
+    order: 2;
+  }
+
+  .content {
+    order: 1;
+  }
+}
+
+@media (max-width: 760px) {
+  .topbar {
+    flex-direction: column;
+  }
+
+  .hero-grid,
+  .columns-2,
+  .proof-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar h1 {
+    font-size: 28px;
+  }
+}
