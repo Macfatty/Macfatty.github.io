@@ -173,6 +173,7 @@ a {
 .content p,
 .content li,
 .content h2,
+.content h3,
 .tag-row,
 .proof-grid,
 .log-block {
@@ -185,7 +186,8 @@ a {
   line-height: 1.65;
 }
 
-.content h2 {
+.content h2,
+.content h3 {
   margin-top: 0;
 }
 
@@ -240,6 +242,56 @@ a {
   color: #90f7b5;
   font-family: "Courier New", monospace;
   line-height: 1.7;
+}
+
+.proof-section + .proof-section {
+  margin-top: 10px;
+}
+
+.proof-heading {
+  color: var(--muted);
+  font-size: 14px;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  margin-top: 22px;
+  margin-bottom: -2px;
+}
+
+.proof-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.proof-card h3 {
+  font-size: 16px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.proof-card p {
+  margin: 0;
+}
+
+.proof-label {
+  color: var(--accent);
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.proof-placeholder {
+  margin-top: auto;
+  min-height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed #4b6f9d;
+  background: rgba(6, 18, 33, 0.6);
+  color: var(--muted);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
 }
 
 .status-list {
