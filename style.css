@@ -22,16 +22,18 @@ body {
   font-family: Verdana, Tahoma, Arial, sans-serif;
   background: linear-gradient(180deg, #030814 0%, #08182c 100%);
   color: var(--text);
+  line-height: 1.5;
 }
 
 a {
   color: #a9d0ff;
+  transition: color 0.18s ease, border-color 0.18s ease, background 0.18s ease;
 }
 
 .page-shell {
   max-width: 1500px;
   margin: 0 auto;
-  padding: 16px;
+  padding: 18px 18px 26px;
 }
 
 .topbar,
@@ -45,8 +47,8 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 16px;
-  padding: 18px;
+  gap: 20px;
+  padding: 20px;
   background: linear-gradient(180deg, #18375d 0%, #0e213d 100%);
 }
 
@@ -75,6 +77,9 @@ a {
   border: 1px solid var(--border);
   background: #08172b;
   white-space: nowrap;
+  font-size: 12px;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
 }
 
 .status-dot {
@@ -96,8 +101,11 @@ a {
 
 .topnav a {
   text-decoration: none;
-  padding: 8px 10px;
-  border: 1px solid transparent;
+  padding: 8px 12px;
+  border: 1px solid #20456f;
+  background: linear-gradient(180deg, #143154 0%, #0c2037 100%);
+  color: #d5e6ff;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
 .topnav a:hover,
@@ -109,20 +117,29 @@ a {
 .layout {
   display: grid;
   grid-template-columns: 240px minmax(0, 1fr) 280px;
-  gap: 14px;
-  margin-top: 14px;
+  gap: 16px;
+  margin-top: 16px;
+  align-items: start;
 }
 
 .panel {
   background: linear-gradient(180deg, var(--panel) 0%, #091726 100%);
+  overflow: hidden;
 }
 
 .panel-title {
-  padding: 9px 12px;
+  padding: 10px 14px;
   font-weight: 700;
+  letter-spacing: 0.3px;
   background: linear-gradient(180deg, #2f67ac 0%, #214d85 100%);
   color: white;
   border-bottom: 1px solid var(--border);
+}
+
+.sidebar,
+.status-column {
+  position: sticky;
+  top: 18px;
 }
 
 .sidebar-list,
@@ -143,13 +160,14 @@ a {
 .sidebar a {
   text-decoration: none;
   display: block;
-  padding: 6px 8px;
+  padding: 7px 9px;
+  border: 1px solid transparent;
 }
 
 .content {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 16px;
 }
 
 .content p,
@@ -162,12 +180,21 @@ a {
   margin-right: 16px;
 }
 
+.content p,
+.content li {
+  line-height: 1.65;
+}
+
+.content h2 {
+  margin-top: 0;
+}
+
 .hero-grid,
 .columns-2,
 .proof-grid {
   display: grid;
-  gap: 12px;
-  margin: 16px;
+  gap: 14px;
+  margin: 18px 16px;
 }
 
 .hero-grid {
@@ -187,8 +214,10 @@ a {
 .status-list div,
 .columns-2 > div {
   border: 1px solid var(--border);
-  background: var(--panel-2);
-  padding: 12px;
+  background: linear-gradient(180deg, var(--panel-2) 0%, #0b1f37 100%);
+  padding: 14px;
+  min-height: 100%;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
 .tag-row {
@@ -230,6 +259,17 @@ a {
   margin: 0;
 }
 
+.footer {
+  margin-top: 16px;
+  padding-bottom: 14px;
+}
+
+.footer p {
+  margin: 16px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
 @media (max-width: 1100px) {
   .layout {
     grid-template-columns: 1fr;
@@ -237,6 +277,7 @@ a {
 
   .sidebar,
   .status-column {
+    position: static;
     order: 2;
   }
 
@@ -258,5 +299,9 @@ a {
 
   .topbar h1 {
     font-size: 28px;
+  }
+
+  .page-shell {
+    padding: 14px 14px 22px;
   }
 }
